@@ -1,7 +1,7 @@
 # Tic Tac Toe Game with Next.js, React, and Tailwind CSS
 
 This is a simple single-player Tic Tac Toe game built with Next.js, React, and Tailwind CSS. In this game, the player competes against the computer (X) to achieve three in a row horizontally, vertically, or diagonally. The player (O) takes turns to play against the computer's random moves.
-You can play the game by visiting the [Live Demo](#) link.
+You can play the game by visiting the [Live Demo](https://tic-tac-toe-henna-one-87.vercel.app/) link.
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
