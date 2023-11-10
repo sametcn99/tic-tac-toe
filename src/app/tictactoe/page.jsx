@@ -26,7 +26,7 @@ export default function TicTacToe() {
       setBoard(newBoard); // Update the game board state
       setXIsNext(!xIsNext); // Toggle the turn to the next player
     },
-    [board, xIsNext],
+    [board, xIsNext]
   );
 
   useEffect(() => {
@@ -74,7 +74,7 @@ export default function TicTacToe() {
           {(winner || isDraw) && (
             // Show the "Play Again" button if there's a winner or it's a draw
             <button
-              className="py-2 px-4 text-white rounded select-none bg-zinc-800"
+              className="py-2 px-4 text-white rounded select-none bg-zinc-800 absolute"
               onClick={handleRestart} // Call handleRestart when the button is clicked
             >
               Play Again
