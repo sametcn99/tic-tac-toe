@@ -28,7 +28,7 @@
     "**/*.tsx",
     ".next/types/**/*.ts",
     "src/app/tictactoe/page.jsx",
-    "src/app/tictactoe/utils/utils.js"
+    "src/app/utils/utils.js"
   ],
   "exclude": ["node_modules"]
 }
