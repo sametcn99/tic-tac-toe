@@ -1,59 +1,78 @@
-# Tic Tac Toe Game with Next.js, React, and Tailwind CSS
+# Tic-Tac-Toe with AI README
 
-This is a simple single-player Tic Tac Toe game built with Next.js, React, and Tailwind CSS. In this game, the player competes against the computer (X) to achieve three in a row horizontally, vertically, or diagonally. The player (O) takes turns to play against the computer's random moves.
-You can play the game by visiting the [Live Demo](https://tic-tac-toe-henna-one-87.vercel.app/) link.
+This README provides an overview of the Tic-Tac-Toe game with AI implemented using React. This project includes a web-based Tic-Tac-Toe game that allows you to play against an AI opponent.
 
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## Table of Contents
 
-## Game Rules
+- [Introduction](#introduction)
+- [Features](#features)
+- [How to Run](#how-to-run)
+- [Game Logic](#game-logic)
+- [AI Implementation](#ai-implementation)
 
-The game follows the standard Tic Tac Toe rules:
+## Introduction
 
-- The computer (X) takes the first turn.
-- The player(O) and the computer (X) take turns to place their marks on the board.
-- The first player to achieve three in a row horizontally, vertically, or diagonally wins the game.
-- If the board is full and no player has won, the game ends in a draw.
+Tic-Tac-Toe with AI is a web-based game built using React. The game provides a simple interface for playing Tic-Tac-Toe against an AI opponent. The game logic is implemented in JavaScript, and it uses the minimax algorithm to create a challenging AI opponent.
 
-## Technologies Used
+## Features
 
-- [Next.js](https://nextjs.org/)
-- [React](https://reactjs.org/)
-- [Tailwind CSS](https://tailwindcss.com/)
+- Play Tic-Tac-Toe against an AI opponent.
+- The AI uses the minimax algorithm to make smart moves.
+- Keep track of the score between the player and the AI.
+- Restart the game or reset the score with ease.
 
-## Getting Started
+## How to Run
 
-First, run the development server:
+To run the Tic-Tac-Toe game on your local machine, follow these steps:
+
+1. Make sure you have Node.js installed. If not, you can download it [here](https://nodejs.org/).
+
+2. Clone the repository to your local machine:
+
+```bash
+git clone https://github.com/sametcn99/tic-tac-toe
+```
+
+3. Navigate to the project directory:
+
+```bash
+cd tic-tac-toe
+```
+
+4. Install the project dependencies:
+
+```bash
+npm i
+```
+
+5. Start the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Game Logic
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+The game logic is implemented in the `src/page.tsx` file. Here's a brief overview of how the game works:
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+- The game board is represented as an array with 9 elements, initially filled with `null`. Each element corresponds to a square on the board.
 
-## Learn More
+- The game keeps track of whose turn it is using the `xIsNext` state variable.
 
-To learn more about Next.js, take a look at the following resources:
+- User interactions are handled by the `handleClick` function, which updates the game board and checks for a winner or a draw.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- The game status, displayed at the top of the interface, informs the player whose turn it is or if the game has been won or is a draw.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+- The `handleRestart` function allows the player to reset the game, and the `handleResetScore` function resets the score.
 
-## Deploy on Vercel
+## AI Implementation
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+The AI in this game is implemented using the minimax algorithm, a well-known algorithm for finding the best move in two-player games. The key functions for the AI are located in the `src/utils/utils.js` file:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
-"# tic-tac-toe" 
-"# tic-tac-toe" 
-"# tic-tac-toe" 
+- `minimax(board, player, isMaximizing)`: This function recursively evaluates the game board to find the best move for the AI (maximizing player) or the opponent (minimizing player).
+
+- `getBestMove(board, player, isMaximizing)`: This function identifies the best move for the AI to make using the minimax algorithm.
+
+- `calculateWinner(squares)`: This function checks if there is a winner on the game board.
+
+The AI takes into account all possible moves and their outcomes to make strategic decisions in the game.
