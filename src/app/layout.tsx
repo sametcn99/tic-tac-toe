@@ -20,6 +20,11 @@ export default function RootLayout({
         <main className="flex flex-col justify-center items-center h-screen">
           {children}
         </main>
+        <footer className="text-white text-center hover:underline">
+          <a href="https://sametcc.me/tic-tac-toe" target="_blank">
+            check out the source code
+          </a>
+        </footer>
         <Analytics />
       </body>
     </html>
